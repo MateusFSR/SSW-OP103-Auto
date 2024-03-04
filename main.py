@@ -2,10 +2,10 @@ import pyautogui as pa
 import time
 import keyboard
 
-play = (1048, 308)
-posiA1 = (72, 299)
-boxTYPE = (923, 307)
-list = (104, 853)
+play = (1004, 308)
+posiA1 = (71, 315)
+boxTYPE = (876, 315)
+list = (109, 707)
 
 def bnu():
     pa.click(boxTYPE, clicks=2)
@@ -17,7 +17,7 @@ while True:
     #code
     pa.click(boxTYPE, clicks=2)
     pa.write('CWB')
-    pa.sleep(2.0)
+    pa.sleep(7.0)
     pa.scroll(-300)
     botaox = pa.locateOnScreen('buttonx.png', confidence=0.8)
 
@@ -35,6 +35,7 @@ while True:
     pa.hotkey('ctrl', 'c')
     pa.sleep(1.3)
     pa.click(list)
+    pa.sleep(1.0)
 
     botaolistacwb = pa.locateOnScreen('cwbcolar.png', confidence=0.8)
     if botaolistacwb:            
@@ -55,7 +56,7 @@ while True:
     #BNU
 
     bnu()
-    pa.sleep(2.0)
+    pa.sleep(7.0)
     pa.scroll(-300)
     botaox = pa.locateOnScreen('buttonx.png', confidence=0.8)
 
@@ -73,6 +74,7 @@ while True:
     pa.hotkey('ctrl', 'c')
     pa.sleep(1.3)
     pa.click(list)
+    pa.sleep(1.0)
 
     botaolistabnu = pa.locateOnScreen('bnucolar.png', confidence=0.8)
     if botaolistabnu:            
@@ -86,10 +88,11 @@ while True:
     pa.hotkey('ctrl', 'v')
     pa.sleep(0.6)
     pa.hotkey('alt', 'tab')
+    pa.sleep(0.5)
     pa.press('esc')
     pa.sleep(2.0)
 
-    time.sleep(10)
+    time.sleep(180)
 
 
 
